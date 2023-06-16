@@ -1,0 +1,122 @@
+:root {
+    --primary-color: rgb(128, 0, 255);
+    --secondary-color: rgb(150, 129, 255);
+    --tertiary-color: rgb(17, 12, 41);
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/ToDoList/assets/background-image.png') ;
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+#intro {
+    font-size: 3em;
+    line-height: 1;
+    padding: 1em 1em 0.5em;
+    animation: roll-up 1s ease-in-out;
+}
+
+#container {
+    max-width: 640px;
+    margin: 0 50px;
+    border-radius: 8px;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+p button {
+    border: 2px;
+    padding: 0.6em 1.2em;
+    margin: 20px 5px;
+    background: var(--tertiary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+p button:hover {
+    background-color: var(--secondary-color);
+    color: black;
+}
+
+p button:active {
+    box-shadow: 1px 1px 2px black;
+}
+
+.title-input {
+    font-size: 18px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 7px;
+    border: none;
+    margin: 0px 5px;
+}
+
+
+
+p input, div input:hover { 
+    box-shadow: 2px 2px 0px gray;
+}
+
+p input, div input:focus {  
+    box-shadow: 2px 2px var(--primary-color);
+}
+
+div {
+    margin: 0 3em;
+}
+
+div input {
+    font-size: 16px;
+    height: 32px;
+    padding: 0 20px;
+    border-radius: 7px;
+    border: none;
+    margin: 0 5px;
+}
+
+h1 button {
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 1px;
+    border-radius: 7px;
+    font-size: 16px;
+    padding: 6px 10px;
+}
+
+h1 button:hover {
+    color: white;
+    background-color: var(--tertiary-color);
+}
+
+ul button {
+    margin: 5px;
+}
+
+ul li::marker {
+    font-size: 14px;
+}
+
+@keyframes roll-up {  /*aanimação do início*/
+    0% {
+      opacity: 0;
+      transform: translateY(10%);  /*início da animação*/
+    }
+    100% {
+      opacity: 1;
+    }
+  }
