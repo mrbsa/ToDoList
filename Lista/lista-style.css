@@ -8,7 +8,7 @@
     box-sizing: border-box;
     outline: 0;
     margin: 0;
-    padding: 0;
+    padding: 1px;
 }
 
 body {
@@ -16,6 +16,8 @@ body {
     font-family: 'Open sans', sans-serif;
     font-size: 1.3em;
     line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
 }
 
 #intro {
@@ -150,6 +152,17 @@ ul li::marker {
     background-color: transparent;
     width: 20px;
     height: 20px;
+}
+
+footer {
+    font-size: smaller;
+    text-align: right;
+    line-height: 0.7em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    padding: 10px;
 }
 
 @keyframes roll-up {  /*aanimação do início*/
