@@ -153,6 +153,7 @@ class ToDoList {
     editName(h1) {  // altera o nome
         const input = document.createElement('input');
         const okButton = document.createElement('button');
+        okButton.setAttribute('class', 'ok-button')
         input.value = this.name;
         okButton.innerText = 'Ok';
 

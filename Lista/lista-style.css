@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url('/ToDoList/assets/background-image.png') ;
+    background-image: url('/assets/background-image.png') ;
     font-family: 'Open sans', sans-serif;
     font-size: 1.3em;
     line-height: 1.5em;
@@ -66,8 +66,6 @@ p button:active {
     margin: 0px 5px;
 }
 
-
-
 p input, div input:hover { 
     box-shadow: 2px 2px 0px gray;
 }
@@ -98,7 +96,7 @@ h1 button {
     padding: 6px 10px;
 }
 
-h1 button:hover {
+.ok-button:hover {
     color: white;
     background-color: var(--tertiary-color);
 }
@@ -111,6 +109,49 @@ ul li::marker {
     font-size: 14px;
 }
 
+/*Ícones dos botões*/
+.edit-button, .delete-button, .erase-button, .done-button, .button-add {
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-image: url('/assets/edit.png');
+    width: 25px;
+    height: 25px;
+}
+
+.delete-button {
+    background-image: url('/assets/delete.png');
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+.erase-button {
+    background-image: url('/assets/delete.png');
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+
+.done-button {
+    background-image: url('/assets/checked.png');
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+
+.button-add {
+    background-image: url('/assets/add.png');
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+
 @keyframes roll-up {  /*aanimação do início*/
     0% {
       opacity: 0;
@@ -120,3 +161,4 @@ ul li::marker {
       opacity: 1;
     }
   }
+
