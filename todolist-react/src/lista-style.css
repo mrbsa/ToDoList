@@ -1,0 +1,143 @@
+:root {
+    --primary-color: rgb(128, 0, 255);
+    --secondary-color: rgb(150, 129, 255);
+    --tertiary-color: rgb(17, 12, 41);
+}
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body, .App {
+    background-color: var(--tertiary-color);
+    font-family: 'Open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#intro {
+    font-size: 3em;
+    line-height: 1;
+    padding: 1em 0;
+    animation: roll-up 1s ease-in-out;
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 640px;
+    margin: 20px auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.title-input {
+    font-size: 18px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 7px;
+    border: 2px solid var(--secondary-color);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.button-add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1.2em;
+    background: var(--tertiary-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 2px solid var(--primary-color);
+}
+
+.button-add:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.todo-list {
+    background: transparent;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-item span {
+    flex: 1;
+    margin-right: 10px;
+    color: white;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 60px;
+    line-height: 1.5em;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.done {
+    text-decoration: line-through;
+    color: lightgray;
+}
+
+.edit-button, .delete-button, .erase-button, .done-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+}
+
+.done-button, .erase-button {
+    width: 20px;
+    height: 20px;
+}
+
+footer {
+    font-size: smaller;
+    text-align: right;
+    line-height: 0.7em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes roll-up {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+    }
+}

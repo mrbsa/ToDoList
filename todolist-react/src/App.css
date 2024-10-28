@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+}
+
+.icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.lists-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.todo-list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 300px;
+}
