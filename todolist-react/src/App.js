@@ -5,11 +5,12 @@ import './lista-style.css';
 import editIcon from './assets/images/edit.png';
 import deleteIcon from './assets/images/delete.png';
 import checkedIcon from './assets/images/checked.png';
-import logoV360 from './assets/images/logo.png'
+import logoV360 from './assets/images/logo.png';
 
 function App() {
   const [lists, setLists] = useState([]);
   const [newListTitle, setNewListTitle] = useState('');
+  const [showInput, setShowInput] = useState(false); 
 
   const addNewList = () => {
     if (!newListTitle) return;
@@ -56,18 +57,22 @@ function App() {
 
       <h1 id="intro">Tem que lembrar de algo para fazer mais tarde? <span style={{ color: '#ff5c13' }}>Liste</span>.</h1>
       <div id="container">
-        <input
-          type="text"
-          value={newListTitle}
-          onChange={(e) => setNewListTitle(e.target.value)}
-          placeholder="Insira um título..."
-          onKeyUp={(e) => e.key === 'Enter' && addNewList()}
-          className="title-input"
-        />
-        <button onClick={addNewList} className="button-add">
-          {/* <img src={addIcon} alt="Add" style={{ width: '20px', height: '20px' }} /> */}
-          Criar nova lista
-        </button>
+        <div id="title-button">
+          <button onClick={() => setShowInput(true)} className="button-add">
+            Criar nova lista
+          </button>
+          {showInput && ( 
+            <input
+              type="text"
+              value={newListTitle}
+              onChange={(e) => setNewListTitle(e.target.value)}
+              placeholder="Insira um título..."
+              onKeyUp={(e) => e.key === 'Enter' && addNewList()}
+              className="title-input"
+              style={{ marginLeft: '10px' }} 
+            />
+          )}
+        </div>
         {lists.map(list => (
           <ToDoList
             key={list.id}

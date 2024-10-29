@@ -50,15 +50,17 @@ function ToDoList({ list, onDelete, onUpdate, editIcon, deleteIcon, checkedIcon 
           </button>
         </h1>
       )}
-      <input
-        type="text"
-        value={taskInput}
-        onChange={(e) => setTaskInput(e.target.value)}
-        placeholder="Adicionar nova tarefa..."
-        onKeyUp={(e) => e.key === 'Enter' && addTask()}
-        className="task-input"
-      />
-      <button className="button-add-task" onClick={addTask}> Add </button>
+      <div class="list-button">
+        <input
+          type="text"
+          value={taskInput}
+          onChange={(e) => setTaskInput(e.target.value)}
+          placeholder="Adicionar nova tarefa..."
+          onKeyUp={(e) => e.key === 'Enter' && addTask()}
+          className="task-input"
+        />
+        <button className="button-add-task" onClick={addTask}> Add </button>
+      </div>
       <ul className="tasks">
         {tasks.map((task, index) => (
           <li key={index} className={task.done ? 'done' : ''}>
