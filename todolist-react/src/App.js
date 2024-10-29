@@ -5,8 +5,7 @@ import './lista-style.css';
 import editIcon from './assets/images/edit.png';
 import deleteIcon from './assets/images/delete.png';
 import checkedIcon from './assets/images/checked.png';
-import addIcon from './assets/images/add.png';
-import backgroundImage from './assets/images/background-image.png';
+import logoV360 from './assets/images/logo.png'
 
 function App() {
   const [lists, setLists] = useState([]);
@@ -34,25 +33,39 @@ function App() {
     <div 
       className="App" 
       style={{ 
-        backgroundImage: `url(${backgroundImage})`, 
+        backgroundColor: '#eeeeee',
         backgroundSize: 'cover', 
         backgroundRepeat: 'no-repeat', 
         backgroundPosition: 'center', 
-        minHeight: '100vh' 
+        minHeight: '100vh', 
+        width: '100%',
       }}
     >
-      <h1 id="intro">Tem que lembrar de algo para fazer mais tarde?</h1>
+      <header id="top">
+        <img src={logoV360} alt="logo" style={{ height: '28px', margin: '25px 20px' }} />
+        <a href="https://www.v360.io/" title="edit icons" target="_blank" rel="noopener noreferrer">
+          Início
+        </a>
+        <a href="https://www.v360.io/blog" title="edit icons" target="_blank" rel="noopener noreferrer">
+          Blog
+        </a>
+        <a href="https://www.v360.io/" title="edit icons" target="_blank" rel="noopener noreferrer">
+          Lista
+        </a>
+      </header>
+
+      <h1 id="intro">Tem que lembrar de algo para fazer mais tarde? <span style={{ color: '#ff5c13' }}>Liste</span>.</h1>
       <div id="container">
         <input
           type="text"
           value={newListTitle}
           onChange={(e) => setNewListTitle(e.target.value)}
           placeholder="Insira um título..."
-          onKeyPress={(e) => e.key === 'Enter' && addNewList()}
+          onKeyUp={(e) => e.key === 'Enter' && addNewList()}
           className="title-input"
         />
         <button onClick={addNewList} className="button-add">
-          <img src={addIcon} alt="Add" style={{ width: '20px', height: '20px' }} />
+          {/* <img src={addIcon} alt="Add" style={{ width: '20px', height: '20px' }} /> */}
           Criar nova lista
         </button>
         {lists.map(list => (
@@ -70,14 +83,12 @@ function App() {
       <footer>
         <h6>
           <a href="https://www.flaticon.com/free-icons/edit" title="edit icons" target="_blank" rel="noopener noreferrer">
-            Edit icons created by Kiranshastry - Flaticon
-          </a><br />
+            Edit icons created by Kiranshastry - Flaticon</a><br/>
           <a href="https://www.flaticon.com/free-icons/plus" title="plus icons" target="_blank" rel="noopener noreferrer">
-            Plus icons created by dmitri13 - Flaticon
-          </a><br />
+            Plus icons created by dmitri13 - Flaticon</a><br/>
           <a href="https://www.flaticon.com/free-icons/delete" title="delete icons" target="_blank" rel="noopener noreferrer">
             Delete icons created by Ilham Fitrotul Hayat - Flaticon
-          </a><br />
+          </a><br/>
           <a href="https://www.flaticon.com/free-icons/check-mark" title="check mark icons" target="_blank" rel="noopener noreferrer">
             Check mark icons created by joalfa - Flaticon
           </a>

@@ -12,7 +12,9 @@ input {
 button {
   margin: 5px;
   padding: 10px;
+  background-color: aqua;
 }
+
 
 .icon {
   margin-left: 10px;
@@ -34,4 +36,8 @@ button {
   padding: 10px;
   border-radius: 5px;
   max-width: 300px;
+}
+
+.icons {
+  color:aquamarine
 }
