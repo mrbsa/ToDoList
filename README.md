@@ -14,9 +14,7 @@ A versão em react possui um deploy simples através do Vercel e pode ser encont
 - Editar nome da lista
 - Apagar listas e tarefas
 - Marcar tarefas como concluídas
-<br>
 ## -> Próximos passos
 Como dito durante a apresentação, a aplicação é simples. Uma maneira de deixá-la mais sofisticada é com a adição de algum método que permita o salvamento de listas, e num momento posterior, até a criação de usuários para o salvamento das listas. Mas a priori, acredito que o salvamento das informações em cachê ou localStorage do navegador seria suficiente, e caso queira algo mais robusto, implementar uma API que se comuinique a um banco de dados simples, usando fetch, por exemplo. Outra melhoria seria o uso da biblioteca bootstrap, para melhorar o front-end da aplicação e deixá-la adaptável a outras telas (maiores, ou menores, como smartphones, que a minha).
-<br>
 ## -> Links
 O cabeçalho possui links para o site da V360 e o rodapé possui links para os ícones gratuitos utilizados.
